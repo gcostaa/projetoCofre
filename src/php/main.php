@@ -1,9 +1,8 @@
 <?php
 
-use Projeto\Cofre\Credential;
-use Projeto\Cofre\Decrypt\Decrypt;
-use Projeto\Cofre\Device;
-use Projeto\Cofre\Encrypt\Encrypt;
+use Projeto\Cofre\Domain\{Credential,Device};
+use Projeto\Cofre\Process\Decrypt\Decrypt;
+use Projeto\Cofre\Process\Encrypt\Encrypt;
 
 require_once '../../vendor/autoload.php';
 

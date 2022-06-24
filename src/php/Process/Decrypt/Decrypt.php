@@ -1,9 +1,9 @@
 <?php
 
-namespace Projeto\Cofre\Decrypt;
+namespace Projeto\Cofre\Process\Decrypt;
 
-use Projeto\Cofre\Credential;
-use Projeto\Cofre\Encrypt\Key;
+use Projeto\Cofre\Domain\Credential;
+use Projeto\Cofre\Process\Encrypt\Key;
 
 class Decrypt
 {

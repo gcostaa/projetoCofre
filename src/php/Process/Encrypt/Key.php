@@ -1,6 +1,6 @@
 <?php
 
-namespace Projeto\Cofre\Encrypt;
+namespace Projeto\Cofre\Process\Encrypt;
 
 class Key
 {

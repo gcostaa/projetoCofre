@@ -1,6 +1,6 @@
 <?php
 
-namespace Projeto\Cofre;
+namespace Projeto\Cofre\Domain;
 
 class Credential
 {
@@ -35,9 +35,9 @@ class Credential
 
     public function __toString()
     {
-        return "Nome da credencial....".$this->credentialName. PHP_EOL .
-        "Dispositivo....".$this->deviceOfCredential. PHP_EOL .
-        "Senha....".$this->password. PHP_EOL .
+        return "Nome da credencial....".$this->credentialName. "<br>" .
+        "Dispositivo....".$this->deviceOfCredential. "<br>" .
+        "Senha....".$this->password. "<br>" .
         "Comentario....".$this->comment;
 
     }

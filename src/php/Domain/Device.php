@@ -1,6 +1,6 @@
 <?php
 
-namespace Projeto\Cofre;
+namespace Projeto\Cofre\Domain;
 
 class Device
 {

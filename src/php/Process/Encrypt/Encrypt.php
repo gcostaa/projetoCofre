@@ -1,8 +1,8 @@
 <?php
 
-namespace Projeto\Cofre\Encrypt;
+namespace Projeto\Cofre\Process\Encrypt;
 
-use Projeto\Cofre\Credential;
+use Projeto\Cofre\Domain\Credential;
 
 class Encrypt
 {
