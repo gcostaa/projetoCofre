@@ -1,6 +1,7 @@
 <?php
 
 use Projeto\Cofre\Credential;
+use Projeto\Cofre\Decrypt\Decrypt;
 use Projeto\Cofre\Device;
 use Projeto\Cofre\Encrypt\Encrypt;
 
@@ -18,7 +19,11 @@ $credencial = new Credential(
     $comment
 );
 
-$teste = new Encrypt($credencial);
+$encrypt = new Encrypt($credencial);
+$credencial->setPassword($encrypt->encryptPassword());
+echo $credencial."<br>";
 
-echo $teste->encryptPassword();
-
+$decrypt = new Decrypt($credencial);
+//var_dump($decrypt);
+$passClean = $decrypt->decryptPassword();
+echo "A senha...: $passClean";

@@ -28,6 +28,11 @@ class Credential
         return $this->password;
     }
 
+    public function setPassword(string $password)
+    {
+        $this->password = $password;
+    }
+
     public function __toString()
     {
         return "Nome da credencial....".$this->credentialName. PHP_EOL .
