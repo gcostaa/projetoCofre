@@ -18,7 +18,7 @@ $credencial = new Credential(
     $comment
 );
 
-$teste = new Encrypt($credencial,"fgddgbvb");
+$teste = new Encrypt($credencial);
 
 echo $teste->encryptPassword();
 

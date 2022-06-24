@@ -8,23 +8,23 @@ class Encrypt
 {
 
     private string $password;
-    private string $key;
+    private Key $key;
 
-    public function __construct(Credential $credential, $key)
+    public function __construct(Credential $credential)
     {
         $this->password = $credential->getPassword();
-        $this->key = $key;
+        $this->key = new Key();
     }
 
     public function encryptPassword(): string
     {
-        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length("aes256"));
+        
         $passwordEncrypted = openssl_encrypt(
             $this->password,
             "aes256",
-            $this->key,
+            $this->key->getKey(),
             OPENSSL_RAW_DATA,
-            $iv
+            $this->key->getIv()
         );
 
         return base64_encode($passwordEncrypted);
