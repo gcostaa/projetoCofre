@@ -2,6 +2,7 @@
 
 use Projeto\Cofre\Credential;
 use Projeto\Cofre\Device;
+use Projeto\Cofre\Encrypt\Encrypt;
 
 require_once '../../vendor/autoload.php';
 
@@ -17,5 +18,7 @@ $credencial = new Credential(
     $comment
 );
 
-echo $credencial;
+$teste = new Encrypt($credencial,"fgddgbvb");
+
+echo $teste->encryptPassword();
 
